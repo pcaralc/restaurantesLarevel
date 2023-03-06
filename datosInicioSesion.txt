@@ -1,0 +1,3 @@
+pepe@gmail.com -> 123456789             :cliente
+administrador@gmail.com -> 123456789    :administrador
+jorge@gmail.com -> 123456789            :repartidor
