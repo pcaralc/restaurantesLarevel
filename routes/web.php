@@ -48,11 +48,12 @@ Route::middleware(['auth', 'rol:admin'])->group(function () {
     Route::get('/admin/repartidores', [ProfileController::class, 'repartidores']);
     Route::get('/admin/repartidor/add', [UserController::class, 'create']);
     Route::post('/admin/repartidor/create', [UserController::class, 'store']);
+    Route::post('/admin/repartidores/{repartidor}/eliminar', [UserController::class, 'delete']);
 
     //pedidos
     Route::get('/admin/pedidos', [PedidoController::class, 'indexAdmin']);
     Route::post('/admin/pedido/{pedido}/modificar', [PedidoController::class, 'update']);
-
+    
 });
 
 // Route::middleware(['auth', 'rol:repartidor'])->group(function () {
@@ -84,7 +85,6 @@ Route::middleware('auth')->group(function () {
     //repartidor
     Route::get('/admin/repartidores', [ProfileController::class, 'repartidores']);
     Route::post('/admin/repartidores/{repartidor}', [UserController::class, 'update']);
-    Route::post('/admin/repartidores/{repartidor}/eliminar', [UserController::class, 'update']);
     
 });
 
